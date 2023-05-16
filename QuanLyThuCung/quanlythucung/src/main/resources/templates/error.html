@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Truy cập bị hạn chế</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    html, body {
+        height: 100%;
+    }
+
+    body {
+        background-image: url("https://thuthuatnhanh.com/wp-content/uploads/2022/06/Anh-Vu-Tru.jpg");
+        color: #fff;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    .container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .text {
+        max-width: 600px;
+        padding: 0 20px;
+        text-align: center;
+    }
+
+    .text h1 {
+        font-size: 6rem;
+        font-weight: bold;
+        text-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        margin-bottom: 20px;
+    }
+
+    .text p {
+        font-size: 1.5rem;
+        line-height: 1.5;
+        margin-bottom: 30px;
+    }
+
+    .button {
+        display: inline-block;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #fff;
+        background-color: #1a1a1a;
+        border-radius: 50px;
+        padding: 12px 30px;
+        transition: background-color 0.3s ease;
+        text-decoration: none;
+    }
+
+    .button:hover {
+        background-color: #4d4d4d;
+    }
+
+    .image {
+        position: relative;
+        width: 400px;
+        height: 400px;
+        margin-left: 50px;
+        background-image: url('https://www.samsung.com/us/common/notfound/img/404_1.jpg');
+        background-size: cover;
+        background-position: center;
+        border-radius: 50%;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    .image:before {
+        content: '';
+        position: absolute;
+        top: -20px;
+        right: -20px;
+        bottom: -20px;
+        left: -20px;
+        border-radius: 50%;
+        background-image: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0.1) 100%);
+        z-index: -1;
+        animation: pulse 4s linear infinite;
+    }
+
+    @keyframes pulse {
+        0% {
+            transform: scale(0.95);
+            opacity: 0.5;
+        }
+        50% {
+            transform: scale(1);
+            opacity: 1;
+        }
+        100% {
+            transform: scale(0.95);
+            opacity: 0.5;
+        }
+    }
+
+</style>
+<body>
+<div class="container">
+    <div class="text">
+        <h1>Lỗi</h1>
+        <p>Bạn không thể truy cập trang này.</p>
+        <a href="/login" class="button">Về trang chủ</a>
+    </div>
+    <div class="image"></div>
+</div>
+<script >const button = document.querySelector('.button');
+
+button.addEventListener('click', () => {
+    window.location.href = '/';
+});
+</script>
+</body>
+</html>
